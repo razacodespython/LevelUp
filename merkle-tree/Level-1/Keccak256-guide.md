@@ -33,4 +33,5 @@ Imagine a function that acts like a digital fingerprint machine. You feed it any
 ### Want to learn more?
 
 Try using this sha256 online tool: [keccak_256](https://emn178.github.io/online-tools/keccak_256.html)
+
 To delve deeper into the mathematics and technical details of Keccak256: [Introduction to Ethereum’s Keccak-256 Algorithm](https://wiki.rugdoc.io/docs/introduction-to-ethereums-keccak-256-algorithm/)
