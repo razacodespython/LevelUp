@@ -1,7 +1,6 @@
 ### Keccak256
 
-Keccak256 also referred to as SHA-3, is a specific cryptographic hash function you'll encounter frequently in the blockchain world, particularly in Ethereum. Here's a breakdown of what it does and how it works:
-1
+Keccak256 also referred to as SHA-3, is a specific cryptographic hash function you'll encounter frequently in the blockchain world, particularly in Ethereum. Here's a breakdown of what it does and how it works
 
 ### What is a Hash Function?
 
@@ -12,6 +11,7 @@ Imagine a function that acts like a digital fingerprint machine. You feed it any
 - Collision Resistance: Two different inputs should virtually never produce the same hash.
 - Avalanche Effect: Even a minor change in the input should result in a completely different output hash.
 - Efficiency: The hash function should be computationally fast.
+- Pseudorandom - It is not possible to guess the output based on the output of similar inputs
 
 ### Keccak256 in Action
 
@@ -23,7 +23,7 @@ Imagine a function that acts like a digital fingerprint machine. You feed it any
 
 - **Verification**: In Ethereum, transactions and other data are hashed using Keccak256. This allows verifying data integrity without revealing the original content.
 - **Security**: Keccak256's collision resistance makes it difficult to tamper with data and create a valid hash.
-- **Standardization:** As the winner of the NIST hash function competition, Keccak256 is a widely trusted and secure hashing algorithm.
+- **Address Generation**: Cryptographic addresses, such as Ethereum addresses, are generated using Keccak256, providing secure identifiers for users and entities.
 
 ### Things to Keep in Mind
 
@@ -33,5 +33,4 @@ Imagine a function that acts like a digital fingerprint machine. You feed it any
 ### Want to learn more?
 
 Try using this sha256 online tool: [keccak_256](https://emn178.github.io/online-tools/keccak_256.html)
-
 To delve deeper into the mathematics and technical details of Keccak256: [Introduction to Ethereum’s Keccak-256 Algorithm](https://wiki.rugdoc.io/docs/introduction-to-ethereums-keccak-256-algorithm/)
