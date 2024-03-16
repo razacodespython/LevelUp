@@ -30,6 +30,10 @@ Imagine a function that acts like a digital fingerprint machine. You feed it any
 - Keccak256 outputs a fixed-length string (256 bits) regardless of the input size.
 - While unlikely, collisions (two different inputs with the same hash) are theoretically possible, but the chances are extremely low.
 
+### Fun Fact
+
+Did you know? The likelihood of a significant asteroid colliding with your specific home is astronomically low. And believe it or not, finding a hash collision for robust hash functions is even more challenging than this cosmic rarity.
+
 ### Want to learn more?
 
 Try using this sha256 online tool: [keccak_256](https://emn178.github.io/online-tools/keccak_256.html)
