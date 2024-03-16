@@ -1,5 +1,3 @@
-Sure, let's break down Merkle Trees and Merkle Proofs without diving into specific code:
-
 ## Merkle Trees
 
 ### What is a Merkle Tree?
@@ -31,37 +29,21 @@ A Merkle proof is a compact way to prove that a specific piece of data (usually 
 
 ### Example:
 
-Imagine you have a Merkle tree representing four transactions:
-
-```
-    Root Hash
-       |
-    Hash 4
-   /     \
-Hash 1   Hash 2
-  |        |
-Tx1      Tx2
-```
-
-To prove that `Tx1` is included in the tree, you would provide:
-
-- The hash of `Tx1`
-- The hash of `Tx2` (its sibling)
-- The hash of `Hash 2` (the parent of `Tx2`)
-- The root hash
-
-With this information, anyone can verify that `Tx1` is indeed part of the Merkle tree without needing the entire dataset.
-
+1
 Visualized, this structure resembles a tree. In the diagram below, "T" designates a transaction, "H" a hash. Note that the image is highly simplified; an average block contains over 500 transactions, not eight
 
 ![alt text](/merkle-tree/images/image.png)
 
 In the image, each leaf node (the bottom row) represents a block of data. Each internal node is a hash of its two children nodes. The hash function takes data as input and creates a unique output string of a fixed length. So, the value in each internal node is the result of hashing the data in its two children nodes. The root node, located at the top, is the hash of all the data blocks in the tree.
 
-Merkle proofs are used to verify that a particular block of data is part of a larger data set without needing to download the entire dataset. For example, if someone wants to verify that a particular transaction is included in a blockchain, they can request a Merkle proof from a node on the network. The Merkle proof will include the hash of the block containing the transaction, along with the hashes of the other nodes that were used to compute the root hash. The verifier can then calculate the hash of the block containing the transaction and compare it to the hash in the proof. If the hashes match, then the verifier can be sure that the transaction is part of the blockchain.
+Merkle proofs are used to verify that a particular block of data is part of a larger data set without needing to download the entire dataset. For example, if someone wants to verify that a particular transaction is included in a blockchain, they can request a Merkle proof from a node on the network. The Merkle proof will include the hash of the block containing the transaction. The verifier can then calculate the hash of the block containing the transaction and compare it to the hash in the proof. If the hashes match, then the verifier can be sure that the transaction is part of the blockchain.
 
-In the image, let's say we want to verify the integrity of block “B”. The verifier would request a Merkle proof from a node on the network. The proof would include the hash of block B (HB), the hash of its sibling node (HA), and the hash of the parent node (H_AB). The verifier can then calculate the hash of block B and its sibling (SHA), and compare it to the hash of the parent node (H_AB) in the proof. If the hashes match, then the verifier can be sure that block B is part of the Merkle tree.
+For example, say that you wanted to verify that transaction TD is included in the block in the diagram above. If you have the root hash (HABCDEFGH), the process is like a game of sudoku: you query the network about HD, and it returns HC, HAB, and HEFGH. The Merkle tree allows you to verify that everything is accounted for with three hashes: given HAB, HC, HEFGH, and the root HABCDEFGH, HD (the only missing hash) has to be present in the data.
 
-## Conclusion
+![alt text](/merkle-tree/images/image1.png)
 
-Merkle trees and Merkle proofs provide a secure and efficient way to verify data integrity in distributed systems. They allow for trustless verification without the need for centralized authority or revealing sensitive data.
+### Additional Notable References:
+
+[Merkle Tree in Blockchain](https://www.investopedia.com/terms/m/merkle-tree.asp)
+
+[Video on Merkle Proof: ](https://www.youtube.com/watch?v=fB41w3JcR7U)
