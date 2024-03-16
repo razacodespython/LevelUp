@@ -54,7 +54,7 @@ With this information, anyone can verify that `Tx1` is indeed part of the Merkle
 
 Visualized, this structure resembles a tree. In the diagram below, "T" designates a transaction, "H" a hash. Note that the image is highly simplified; an average block contains over 500 transactions, not eight
 
-![alt text](image.png)
+![alt text](/merkle-tree/images/image.png)
 
 In the image, each leaf node (the bottom row) represents a block of data. Each internal node is a hash of its two children nodes. The hash function takes data as input and creates a unique output string of a fixed length. So, the value in each internal node is the result of hashing the data in its two children nodes. The root node, located at the top, is the hash of all the data blocks in the tree.
 
