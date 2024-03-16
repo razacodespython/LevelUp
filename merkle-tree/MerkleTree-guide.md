@@ -44,6 +44,6 @@ For example, say that you wanted to verify that transaction TD is included in th
 
 ### Additional Notable References:
 
-[Merkle Tree in Blockchain](https://www.investopedia.com/terms/m/merkle-tree.asp)
+Investopedia article explaining Merkle trees in blockchain. [Merkle Tree in Blockchain](https://www.investopedia.com/terms/m/merkle-tree.asp)
 
-[Video on Merkle Proof: ](https://www.youtube.com/watch?v=fB41w3JcR7U)
+YouTube video explaining Merkle trees in blockchain. [Merkle Tree| Merkle Root](https://www.youtube.com/watch?v=fB41w3JcR7U)
