@@ -1,5 +1,3 @@
-Here's the modified Level 2 instructions with the addition of the explanation of `abi.encodePacked()`:
-
 # 🚀 Level 2: Implementing Merkle Proof Verification! 🌟
 
 Welcome to Level 2!
@@ -50,12 +48,6 @@ In each section, you will find instructions on how to tackle that particular act
 
 - Follow the step-by-step instructions provided to implement the `verifyMerkleProof` function in Solidity.
 
-## Explanation of `abi.encodePacked()`
-
-- **ABI:** Stands for Application Binary Interface. It's a standard way of defining how to interact with smart contracts and how data is structured between them.
-- **Encoding:** In Solidity, different data types need to be encoded in a specific format before they can be hashed. `abi.encodePacked()` tightly packs data according to the ABI standard.
-- **Why it's Needed:** `keccak256()` expects a single `bytes` input. `abi.encodePacked()` ensures that our input string (or any other data types) is converted into this expected `bytes` format.
-
 ## How to Succeed in This Challenge 🌟
 
 1. **Understand the Objective**: Before diving into implementation, make sure you understand the objective of this level. This will guide you throughout the implementation process.
@@ -92,37 +84,3 @@ Merkle trees are a fundamental component of blockchain technology, enabling effi
    - Implement a function to hash data using the `keccak256` function.
    - Construct a Merkle tree from a set of sample transactions provided in the contract constructor.
    - Understand how Merkle trees are built by hashing individual data elements to create parent nodes until a single root hash is obtained.
-
-**Instructions**
-
-**Step 1: Set Up Your Environment**
-
-- Prepare Your Workspace: Create a New Folder called `merkle_tree_level1`.
-- Initialize a New Project: Start with a clean slate using `forge init`.
-
-**Step 2: Write the Contract**
-
-- Implement Hashing: Create a function to hash data using `keccak256`.
-- Construct Merkle Tree: Generate a Merkle tree from a set of sample transactions provided in the contract constructor.
-
-**Step 3: Compile**
-
-- Ensure Accuracy: Compile your contract and resolve any errors.
-
-**Final Thoughts**
-
-Congratulations! You've completed Level 1 of your Merkle Tree Learning Adventure. This exercise has equipped you with the foundational knowledge and skills required to understand Merkle trees and their construction process. In the next level, you'll delve deeper into Merkle proofs and their role in data integrity verification.
-
-Once you've successfully deployed your contract and verified its functionality, pat yourself on the back. You're making significant progress in mastering Merkle trees and becoming a proficient blockchain developer.
-
-Remember to share your journey with others and seek assistance if you encounter any challenges. Learning is a collaborative process, and together, we can unlock the full potential of blockchain technology.
-
-Happy coding, and may the Merkle trees be ever in your favor!
-
-1. hash + merkle tree
-2. verify
-3. test
-
----
-
-Here's the detailed instructions for Level 1:
