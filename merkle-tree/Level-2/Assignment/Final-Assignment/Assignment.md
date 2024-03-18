@@ -27,24 +27,25 @@ The `verify` function in the MerkleProof contract is designed to facilitate the 
 - Prepare Your Workspace: Create a New Folder called `merkle_tree_level1`.
 - Initialize a New Project: Start with a clean slate using `forge init`.
 
-Got it, here's a more detailed guide on implementing the `verify` function without providing actual code:
-
 **Step 2: Write the Contract**
 
 - Implement the `verify` Function:
-  - Define the `verify` function with the following signature: `function verify(bytes32[] memory proof, bytes32 root, bytes32 leaf, uint256 index) public pure returns (bool)`.
-  - Inside the function, initialize a local variable `hash` with the value of the `leaf` parameter.
-  - Iterate over each element in the `proof` array using a `for` loop.
-  - For each element in the proof:
-    - Retrieve the current proof element from the array.
-    - Check if the `index` is even or odd.
-    - If the index is even, concatenate the current `hash` with the proof element and compute the `keccak256` hash of the concatenated result. Update the `hash` variable with the new hash value.
-    - If the index is odd, concatenate the proof element with the current `hash` and compute the `keccak256` hash of the concatenated result. Update the `hash` variable with the new hash value.
-    - Divide the `index` by 2.
-  - After iterating through all proof elements, compare the final `hash` value with the provided `root` hash.
-  - If the computed hash matches the root hash, return `true`, indicating that the proof is valid. Otherwise, return `false`.
+  - Define a function called `verify` that checks if a leaf node's integrity in a Merkle tree is valid.
+  - Input Parameters: The `verify` function takes in four parameters:
+    - `proof`: An array containing the proof elements.
+    - `root`: The root hash of the Merkle tree.
+    - `leaf`: The hash of the leaf node to verify.
+    - `index`: The index of the leaf node in the Merkle tree.
+  - Verify Process:
+    - Start with the hash of the leaf node.
+    - Iterate through each proof element:
+      - If the index is even, concatenate the current hash with the proof element and compute the hash of the concatenation.
+      - If the index is odd, concatenate the proof element with the current hash and compute the hash of the concatenation.
+      - Update the hash value and divide the index by 2.
+    - Compare the final hash value with the provided root hash.
+    - If they match, return `true`, indicating that the proof is valid; otherwise, return `false`.
 
-By following these steps, you can implement the `verify` function to check the integrity of a leaf node in a Merkle tree. If you have any further questions or need clarification on any step, feel free to ask!
+By following these steps, the `verify` function allows users to efficiently verify the correctness of data stored in a Merkle tree without having to traverse the entire tree. If you have any further questions or need clarification on any step, feel free to ask!
 
 Stuck? Check [Assignment-Hints](../Assignment-Hints/Hints.md) for guidance.
 
