@@ -27,10 +27,24 @@ The `verify` function in the MerkleProof contract is designed to facilitate the 
 - Prepare Your Workspace: Create a New Folder called `merkle_tree_level1`.
 - Initialize a New Project: Start with a clean slate using `forge init`.
 
+Got it, here's a more detailed guide on implementing the `verify` function without providing actual code:
+
 **Step 2: Write the Contract**
 
-- Implement Hashing: Create a function to hash data using `keccak256`.
-- Construct Merkle Tree: Generate a Merkle tree from a set of sample transactions provided in the contract constructor.
+- Implement the `verify` Function:
+  - Define the `verify` function with the following signature: `function verify(bytes32[] memory proof, bytes32 root, bytes32 leaf, uint256 index) public pure returns (bool)`.
+  - Inside the function, initialize a local variable `hash` with the value of the `leaf` parameter.
+  - Iterate over each element in the `proof` array using a `for` loop.
+  - For each element in the proof:
+    - Retrieve the current proof element from the array.
+    - Check if the `index` is even or odd.
+    - If the index is even, concatenate the current `hash` with the proof element and compute the `keccak256` hash of the concatenated result. Update the `hash` variable with the new hash value.
+    - If the index is odd, concatenate the proof element with the current `hash` and compute the `keccak256` hash of the concatenated result. Update the `hash` variable with the new hash value.
+    - Divide the `index` by 2.
+  - After iterating through all proof elements, compare the final `hash` value with the provided `root` hash.
+  - If the computed hash matches the root hash, return `true`, indicating that the proof is valid. Otherwise, return `false`.
+
+By following these steps, you can implement the `verify` function to check the integrity of a leaf node in a Merkle tree. If you have any further questions or need clarification on any step, feel free to ask!
 
 Stuck? Check [Assignment-Hints](../Assignment-Hints/Hints.md) for guidance.
 
