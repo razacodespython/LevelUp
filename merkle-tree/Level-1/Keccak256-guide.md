@@ -1,4 +1,4 @@
-### Keccak256
+## Keccak256
 
 Keccak256 also referred to as SHA-3, is a specific cryptographic hash function you'll encounter frequently in the blockchain world, particularly in Ethereum. Here's a breakdown of what it does and how it works
 

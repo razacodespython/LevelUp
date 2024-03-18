@@ -47,7 +47,7 @@ The `verify` function in the MerkleProof contract is designed to facilitate the 
 
 By following these steps, the `verify` function allows users to efficiently verify the correctness of data stored in a Merkle tree without having to traverse the entire tree. If you have any further questions or need clarification on any step, feel free to ask!
 
-Stuck? Check [Assignment-Hints](../Assignment-Hints/Hints.md) for guidance.
+Stuck? Check [Assignment-Hints](./Assignment-Hints/MerkleTree.sol) for guidance.
 
 **Step 3: Compile**
 
