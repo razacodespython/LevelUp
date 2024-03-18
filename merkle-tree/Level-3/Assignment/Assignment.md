@@ -1,16 +1,12 @@
 # Level 3 - Testing the Merkle Proof Verification
 
-Welcome to Level 3 of your Smart Contract Development journey! In this level, you'll put your Merkle proof verification function to the test. Your task is to implement a test case in the TestMerkleProof contract that verifies the 3rd leaf node using the provided proof, root, leaf, and index. Ready to ensure the correctness of your Merkle proof verification function? Let's dive in!
+Welcome to Level 3 of your Smart Contract Development journey! In this level, you'll put your Merkle proof verification function to the test. Your task is to implement a test case in the TestMerkleProof contract to verify the Merkle proof using the provided proof, root, leaf, and index. Ready to ensure the correctness of your Merkle proof verification function? Let's dive in!
 
 ## Objective
 
-Your objective in Level 3 is to test the Merkle proof verification function using the TestMerkleProof contract. By implementing a test case that verifies the 3rd leaf node, you'll ensure that your verification function returns `true` for this specific scenario.
+Your objective in Level 3 is to implement a test case in the TestMerkleProof contract that verifies the Merkle proof using the provided proof, root, leaf, and index. Here's a breakdown of what you need to do:
 
-## Task
-
-Your task in Level 3 is to implement a test case in the TestMerkleProof contract that verifies the 3rd leaf node using the provided proof, root, leaf, and index. Here's a breakdown of what you need to do:
-
-- **Test Case Implementation**: Write a test case in the TestMerkleProof contract that verifies the 3rd leaf node using the provided proof, root, leaf, and index.
+- **Test Case Implementation**: Write a test case in the TestMerkleProof contract that verifies the Merkle proof using the provided proof, root, leaf, and index.
 - **Verification Function Call**: Call the `verify` function with the provided proof, root, leaf, and index parameters.
 - **Expected Outcome**: Ensure that the verification function returns `true` for this test case.
 
@@ -18,40 +14,48 @@ Your task in Level 3 is to implement a test case in the TestMerkleProof contract
 
 ### Step 1: Understand the Objective
 
-- Review the objective of Level 3 to understand the task at hand. Your goal is to implement a test case that verifies the 3rd leaf node using the provided proof, root, leaf, and index.
+- Review the objective of Level 3 to understand the task at hand. Your goal is to implement a test case that verifies the Merkle proof using the provided proof, root, leaf, and index.
 
 ### Step 2: Implement the Test Case
 
-- Navigate to the TestMerkleProof contract and write a test case that verifies the 3rd leaf node using the provided proof, root, leaf, and index.
-- Call the `verify` function with the provided parameters and ensure that it returns `true` for this test case.
+**Define the Contract:** Start by defining the contract named TestMerkleProof. Remember to specify that it inherits from the MerkleProof contract.
+
+**Declare the Public Hashes Array:** Inside the contract, declare a public array named hashes of type bytes32[]. This array will hold the hashed values of the transactions.
+
+**Implement the Constructor:** Write a constructor function that initializes the contract. Inside the constructor:
+
+- Define an array named transactions containing : ["alice -> bob", "bob -> dave", "carol -> alice", "dave -> bob"]
+  -Iterate through each transaction in the transactions array. It hashes each transaction individually. These hashes become the leaves of the Merkle tree.
+  -Hash each transaction using the keccak256 function and push the hash into the hashes array.
+
+  -The contract then repeatedly pairs up these hashes and hashes the pairs, moving up the tree until it calculates the final "Merkle root".
+
+**Build the Merkle Tree:** After initializing the hashes array with individual transaction hashes, build the Merkle tree. You can follow the same logic used in the MerkleProof contract to construct the tree.
+
+**Define the getRoot Function:** Implement a public view function named getRoot that returns the root hash of the Merkle tree. This function should return the last element of the hashes array.
 
 ### Step 3: Verify the Outcome
 
-- After implementing the test case, deploy the TestMerkleProof contract and verify that the verification function returns `true` for the 3rd leaf node.
+**Deploy:** Deploy the TestMerkleProof contract to a blockchain environment (either a test network or a live blockchain).
+
+**Get the Merkle Root:** After deployment, call the getRoot() function on your contract instance. This will provide you with the Merkle root hash.
+
+**Generate a Proof:** To prove a specific transaction:
+
+- Determine the index (position) of your transaction within the original list.
+- Calculate the hash of your transaction using keccak256.
+- Using an off-chain script or tool, generate the Merkle proof. This is a list of sibling hashes needed for verification.
+
+**Verify:** Call the verify() function from the MerkleProof contract, providing:
+
+- The Merkle proof.
+- The Merkle root.
+- The hash of your transaction.
+- The index of your transaction.
+- The function will return true if the transaction is valid, and false otherwise.
 
 ## Final Thoughts
 
 Testing is a crucial aspect of smart contract development. By implementing a test case for the Merkle proof verification function, you'll ensure that it behaves as expected under different scenarios. After completing Level 3, you'll have confidence in the correctness and effectiveness of your Merkle proof verification implementation.
 
-Congratulations on reaching Level 3! Your commitment to mastering smart contract development is commendable. Keep up the great work, and don't hesitate to seek support from the community if needed.
-
 Celebrate your progress and share your success with others. Together, we'll continue to push the boundaries of blockchain technology!
-
-// \*\* -------------------------------
-
-**Smart Contract Development: Level 1 - Merkle Tree Learning Adventure**
-
-Welcome to Level 1 of your Merkle Tree Learning Adventure! In this exercise, you'll dive into the fascinating world of Merkle trees and lay the groundwork for understanding Merkle proofs in the next level. You'll start by understanding the basics of cryptographic hashing with Keccak256 and then proceed to implement a simple Merkle tree construction contract. Are you ready to embark on this exciting journey? Let's dive in!
-
-**Objective**
-
-Your task is to develop a Solidity smart contract that constructs a Merkle tree from a set of sample transactions. This contract will serve as the foundation for understanding how Merkle trees ensure data integrity in blockchain applications.
-
-**The Essence of Merkle Tree Construction**
-
-Merkle trees are a fundamental component of blockchain technology, enabling efficient and secure verification of large datasets. In this exercise, you'll focus on constructing a Merkle tree using cryptographic hashing and understanding its hierarchical structure. Let's break down the key components and functionalities of our Merkle Tree Construction Contract:
-
-1. Introduction to Keccak256 and Merkle Trees:
-   - Implement a function to hash data using the `keccak256` function.
-   - Construct a Merkle tree from a set of sample transactions provided in the contract constructor.
-   - Understand how Merkle trees are built by hashing individual data elements to create parent nodes until a single root hash is obtained.
