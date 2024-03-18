@@ -18,7 +18,7 @@ Let's get started! 💪
 
 **3. GO TO FINAL ASSIGNMENT (CLICK BELOW)**
 
-[<img alt="start here" width="250px" src="../images/finalAssignment.png" />](./Assignment/Assignment.md)
+[<img alt="start here" width="250px" src="../images/finalAssignment.png" />](./Assignment/Readme.md)
 
 1. Objective: Begin by understanding the objective of this level. You'll learn about the task at hand and the expected outcome of your implementation.
 

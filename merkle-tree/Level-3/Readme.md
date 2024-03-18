@@ -18,7 +18,7 @@ Let's get started! 💪
 
 **3. GO TO FINAL ASSIGNMENT (CLICK BELOW)**
 
-[<img alt="start here" width="250px" src="../images/finalAssignment.png" />](./Assignment/Assignment.md)
+[<img alt="start here" width="250px" src="../images/finalAssignment.png" />](./Assignment/Readme.md)
 
 1. For Merkle Tree Basics: Review the fundamentals of Merkle Trees to understand their structure and how they are used for data verification.
 2. Explore the Syntax: Dive into Solidity syntax to refresh your knowledge and prepare for implementing the test case.
