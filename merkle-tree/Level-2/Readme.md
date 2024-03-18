@@ -65,22 +65,3 @@ In each section, you will find instructions on how to tackle that particular act
 Congratulations on completing Level 2 of the Merkle Proof Verification challenge! You've successfully implemented a function to verify the integrity of a leaf node in a Merkle tree, a fundamental skill in blockchain development. Keep up the great work, and get ready for more challenges ahead! 🚀🌟
 
 Remember, every challenge you overcome brings you one step closer to becoming a proficient blockchain developer. Embrace the learning journey, and let's continue to revolutionize the world of blockchain together! 💥🔗🌐
-
-# --------------------------------------------------------
-
-**Smart Contract Development: Level 1 - Merkle Tree Learning Adventure**
-
-Welcome to Level 1 of your Merkle Tree Learning Adventure! In this exercise, you'll dive into the fascinating world of Merkle trees and lay the groundwork for understanding Merkle proofs in the next level. You'll start by understanding the basics of cryptographic hashing with Keccak256 and then proceed to implement a simple Merkle tree construction contract. Are you ready to embark on this exciting journey? Let's dive in!
-
-**Objective**
-
-Your task is to develop a Solidity smart contract that constructs a Merkle tree from a set of sample transactions. This contract will serve as the foundation for understanding how Merkle trees ensure data integrity in blockchain applications.
-
-**The Essence of Merkle Tree Construction**
-
-Merkle trees are a fundamental component of blockchain technology, enabling efficient and secure verification of large datasets. In this exercise, you'll focus on constructing a Merkle tree using cryptographic hashing and understanding its hierarchical structure. Let's break down the key components and functionalities of our Merkle Tree Construction Contract:
-
-1. Introduction to Keccak256 and Merkle Trees:
-   - Implement a function to hash data using the `keccak256` function.
-   - Construct a Merkle tree from a set of sample transactions provided in the contract constructor.
-   - Understand how Merkle trees are built by hashing individual data elements to create parent nodes until a single root hash is obtained.
