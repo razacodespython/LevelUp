@@ -32,14 +32,14 @@ Your objective in Level 3 is to implement a test case in the TestMerkleProof con
 
 **Build the Merkle Tree:** After initializing the hashes array with the individual transaction hashes, we'll construct the Merkle tree using a recursive algorithm. Here's how it works:
 
-    **Initial Hashes:** We start by hashing each individual transaction from the transactions array and pushing these hashes into the hashes array. This ensures that each transaction is represented by its hash.
+1. **Initial Hashes:** We start by hashing each individual transaction from the transactions array and pushing these hashes into the hashes array. This ensures that each transaction is represented by its hash.
 
-    **Tree Construction:** We then determine the number of transactions (n) and initialize an offset variable to 0.
-       - In each iteration of the while loop, we pair adjacent hashes to create parent nodes. We start by pairing the first two hashes, then the next two, and so on, until we've paired all adjacent hashes.
-        - For each pair of hashes, we concatenate them using abi.encodePacked() and hash the result using keccak256(). This produces a new hash representing the parent node.
-        - We push these parent node hashes into the hashes array.
-        - After each iteration of the loop, we update the offset variable to point to the next set of hashes to be paired.
-        - We halve the value of n in each iteration to determine the number of pairs to be formed in the next iteration.
+2. **Tree Construction:** We then determine the number of transactions (n) and initialize an offset variable to 0.
+   - In each iteration of the while loop, we pair adjacent hashes to create parent nodes. We start by pairing the first two hashes, then the next two, and so on, until we've paired all adjacent hashes.
+   - For each pair of hashes, we concatenate them using abi.encodePacked() and hash the result using keccak256(). This produces a new hash representing the parent node.
+   - We push these parent node hashes into the hashes array.
+   - After each iteration of the loop, we update the offset variable to point to the next set of hashes to be paired.
+   - We halve the value of n in each iteration to determine the number of pairs to be formed in the next iteration.
 
 **Define the getRoot Function:** Implement a public view function named getRoot that returns the root hash of the Merkle tree. This function should return the last element of the hashes array.
 
