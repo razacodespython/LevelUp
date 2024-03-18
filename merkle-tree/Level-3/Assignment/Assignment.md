@@ -14,7 +14,7 @@ Your objective in Level 3 is to implement a test case in the TestMerkleProof con
 
 ### Step 1: Understand the Objective
 
-- Review the objective of Level 3 to understand the task at hand. Your goal is to implement a test case that verifies the Merkle proof using the provided proof, root, leaf, and index.
+Review the objective of Level 3 to understand the task at hand. Your goal is to implement a test case that verifies the Merkle proof using the provided proof, root, leaf, and index.
 
 ### Step 2: Implement the Test Case
 
@@ -25,10 +25,11 @@ Your objective in Level 3 is to implement a test case in the TestMerkleProof con
 **Implement the Constructor:** Write a constructor function that initializes the contract. Inside the constructor:
 
 - Define an array named transactions containing : ["alice -> bob", "bob -> dave", "carol -> alice", "dave -> bob"]
-  -Iterate through each transaction in the transactions array. It hashes each transaction individually. These hashes become the leaves of the Merkle tree.
-  -Hash each transaction using the keccak256 function and push the hash into the hashes array.
 
-  -The contract then repeatedly pairs up these hashes and hashes the pairs, moving up the tree until it calculates the final "Merkle root".
+  - Iterate through each transaction in the transactions array. It hashes each transaction individually. These hashes become the leaves of the Merkle tree.
+  - Hash each transaction using the keccak256 function and push the hash into the hashes array.
+
+  - The contract then repeatedly pairs up these hashes and hashes the pairs, moving up the tree until it calculates the final "Merkle root".
 
 **Build the Merkle Tree:** After initializing the hashes array with the individual transaction hashes, we'll construct the Merkle tree using a recursive algorithm. Here's how it works:
 
