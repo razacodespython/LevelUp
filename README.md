@@ -191,5 +191,5 @@ Congratulations! You've successfully created a multi-signature wallet smart cont
 
 By following these best practices and understanding the practical use cases and vulnerabilities of multi-signature wallets, developers and users can leverage the security and flexibility of multi-sig technology while minimizing risks and maximizing the benefits.
 
-##### Author: [1xahmed](https://twitter.com/1xahmedali)
-##### [Github: 1xahmed](github.com/1xahmed)
+**Author: [1xahmed](https://twitter.com/1xahmedali) **
+**[Github: 1xahmed](github.com/1xahmed) **
