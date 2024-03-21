@@ -1,6 +1,6 @@
 # LevelUp 
 
-## Level 1 Create Multi=Signature Wallet
+## Level 1 Create Multi-Signature Wallet
 
 
 # Multi-Sig Wallet Step-by-Step Tutorial
