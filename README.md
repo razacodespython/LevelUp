@@ -190,3 +190,6 @@ Congratulations! You've successfully created a multi-signature wallet smart cont
 5. **Community Consensus**: In DAOs or decentralized organizations, prioritize community consensus and transparency in decision-making processes, ensuring that all stakeholders have a voice in governance and fund management.
 
 By following these best practices and understanding the practical use cases and vulnerabilities of multi-signature wallets, developers and users can leverage the security and flexibility of multi-sig technology while minimizing risks and maximizing the benefits.
+
+## Author: 1xahmed
+## Git: github.com/1xahmed
